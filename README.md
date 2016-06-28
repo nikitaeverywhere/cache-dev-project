@@ -12,7 +12,7 @@ Requirements
 Requires [Node.JS](https://nodejs.org) (v0.10.0-6.2.2+), [Git](https://git-scm.com) and [Caché](http://www.intersystems.com/library/software-downloads/) 2016.2+ to be installed.
 
 Prepare the import (Windows)
-----------------
+----------------------------
 
 0. Clone this repository to your local file system.
     * Use `git clone https://github.com/ZitRos/cache-dev-project` to clone the project.
@@ -26,6 +26,9 @@ Prepare the import (Windows)
     * After successful import, run `do ##class(DevProject.Robot).Message()` in Caché terminal to check if project imported.
 
 Prepare the import (*nix)
---------------
+-------------------------
 
-Write analogue of windows `import.bat` script and make a pull request :) Thanks!
+0. Clone this repository to your local file system.
+    * Use `git clone https://github.com/ZitRos/cache-dev-project` to clone the project.
+    * Then enter cloned project's directory: `cd cache-dev-project`.
+1. Write analogue of windows `import.bat` script and make a pull request :) Thanks!
