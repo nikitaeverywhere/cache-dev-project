@@ -1,4 +1,4 @@
-# Caché Project Development Without Studio <sup>(extended sample project)</sup>
+# Caché Project Development Without Studio <sup>(extended)</sup>
 This repository includes sample minimalistic Caché project, which is developed and maintained out of Caché
 environment, directly in the file system. By running `import.bat` script the project imports to Caché.
 
