@@ -2,6 +2,8 @@
 This repository includes sample minimalistic Caché project, which is developed and maintained out of Caché
 environment, directly in the file system. By running `import.bat` script the project imports to Caché.
 
+To get **more advanced example**, please check the [extended version](https://github.com/ZitRos/cache-dev-project/tree/extended) tree.
+
 This project includes `DevProject.Robot` class with `Message()` method. Any other classes should go
 in hierarchy under the [source/cls](https://github.com/ZitRos/cache-dev-project/tree/master/source/cls)
 directory.
