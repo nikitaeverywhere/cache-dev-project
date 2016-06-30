@@ -20,10 +20,11 @@ Prepare the import
 0. Clone this repository to your local file system.
     * Use `git clone https://github.com/ZitRos/cache-dev-project` to clone the project.
     * Then enter cloned project's directory: `cd cache-dev-project`.
+    * Install all Node.JS dependencies with the command `npm install`.
 1. Edit [import.bat](https://github.com/ZitRos/cache-dev-project/blob/master/import.bat) (Windows) or [import.sh](https://github.com/ZitRos/cache-dev-project/blob/master/import.sh) (*nix) script:
     * Set `CACHE_DIR` variable to the directory of installed Caché in your system. Do not add whitespaces before or after `=` symbol.
-    * Set `NAMESPACE` variable to the namespace you want import project to.
-    * Set `USERNAME` and `PASSWORD` variables if Caché instance requires one.
+    * Set `NAMESPACE` variable to the namespace you want to import project to.
+    * Set `USERNAME` and `PASSWORD` variables if Caché instance requires ones.
     * Change `CSP_DIR` to the directory where you want static files to be copied to.
 2. Each next time just run the `import.*` script!
     * You should receive build and import log, saying `IMPORT STATUS: OK` at the end.
