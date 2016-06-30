@@ -13,6 +13,8 @@ CACHE_DIR=/InterSystems/Cache
 NAMESPACE=USER
 # Other variables
 BUILD_DIR=build/cls
+BUILD_STATIC_DIR=build/static
+CSP_DIR=/InterSystems/Cache/csp/user
 # Credentials
 USERNAME=_SYSTEM
 PASSWORD=SYS
@@ -20,6 +22,7 @@ PASSWORD=SYS
 # Build and import application to Caché
 echo "Importing project..."
 npm run gulp
+cp -R "$DIR/$BUILD_STATIC_DIR"* "$CSP_DIR"
 cat <<EOT | "$CACHE_DIR/bin/cache" -s "$CACHE_DIR/mgr" -U $NAMESPACE
 $USERNAME
 $PASSWORD

@@ -11,6 +11,8 @@ set CACHE_DIR=C:\Program Files\InterSystems\Ensemble
 set NAMESPACE=USER
 :: Other variables
 set BUILD_DIR=build\cls
+set BUILD_STATIC_DIR=build\static
+set CSP_DIR=C:\Program Files\InterSystems\Ensemble\CSP\user
 :: User credentials. Remove if necessary.
 set USERNAME=_SYSTEM
 set PASSWORD=SYS
@@ -18,6 +20,7 @@ set PASSWORD=SYS
 :: Build and import application to Caché
 echo Importing project...
 call npm run gulp
+call xcopy /y "%~dp0\%BUILD_STATIC_DIR%" "%CSP_DIR%"
 (
 echo %USERNAME%
 echo %PASSWORD%

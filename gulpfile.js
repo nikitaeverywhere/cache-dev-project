@@ -1,12 +1,15 @@
 var gulp = require("gulp"),
     rimraf = require("gulp-rimraf"),
-    rename = require("gulp-rename"),
     preprocess = require("gulp-preprocess"),
+    uglify = require("gulp-uglify"),
+    cssMin = require("gulp-cssmin"),
     pkg = require("./package.json");
 
 var sourceDir = __dirname + "/source",
     buildDir = __dirname + "/build",
-    context = { package: pkg };
+    context = { context: {
+        package: pkg
+    }};
 
 gulp.task("clean", function () {
     return gulp.src(buildDir, { read: false })
@@ -15,12 +18,28 @@ gulp.task("clean", function () {
 
 gulp.task("cls", ["clean"], function () {
     return gulp.src(sourceDir + "/cls/**/*.cls")
-        .pipe(rename(function (f) {
-            f.basename = (f.dirname === "." ? "" : f.dirname) + "." + f.basename;
-            f.dirname = ".";
-        }))
         .pipe(preprocess(context))
         .pipe(gulp.dest(buildDir + "/cls"));
 });
 
-gulp.task("default", ["cls"]);
+gulp.task("html", ["clean"], function () {
+    return gulp.src(sourceDir + "/static/**/*.html")
+        .pipe(preprocess(context))
+        .pipe(gulp.dest(buildDir + "/static"));
+});
+
+gulp.task("js", ["clean"], function () {
+    return gulp.src(sourceDir + "/static/**/*.js")
+        .pipe(preprocess(context))
+        .pipe(uglify())
+        .pipe(gulp.dest(buildDir + "/static"));
+});
+
+gulp.task("css", ["clean"], function () {
+    return gulp.src(sourceDir + "/static/**/*.css")
+        .pipe(preprocess(context))
+        .pipe(cssMin())
+        .pipe(gulp.dest(buildDir + "/static"));
+});
+
+gulp.task("default", ["cls", "html", "js", "css"]);

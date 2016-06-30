@@ -1,0 +1,45 @@
+html {
+    background-color: #41a0dd;
+    background-image: url(https://cdn.theatlantic.com/assets/media/img/mt/2016/03/RTX283V4/lead_960.jpg);
+    background-size: 100% 100%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+    height: 100%;
+    overflow: auto;
+}
+
+input[type=button] {
+    color: black;
+    font: inherit;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding: .5em;
+    font-size: 125%;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    color: #41a0dd;
+}
+
+body {
+    text-align: center;
+}
+
+table {
+    margin: 2em auto;
+    border: none;
+}
+
+table td {
+    padding: .5em;
+    border: none;
+}
+
+.version {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: .5em;
+}

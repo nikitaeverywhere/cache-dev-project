@@ -1,10 +1,13 @@
-# Caché Project Development Without Studio
+# Caché Project Development Without Studio <sup>(extended sample project)</sup>
 This repository includes sample minimalistic Caché project, which is developed and maintained out of Caché
 environment, directly in the file system. By running `import.bat` script the project imports to Caché.
 
-This project includes `DevProject.Robot` class with `Message()` method. Any other classes should go
-in hierarchy under the [source/cls](https://github.com/ZitRos/cache-dev-project/tree/master/source/cls)
-directory.
+Preview
+-------
+
+This project includes some sample classes, which create this web application:
+
+![2016-06-30_154025](https://cloud.githubusercontent.com/assets/4989256/16488403/09f5006a-3ed9-11e6-8271-0ef6cfe7e1cb.png)
 
 Requirements
 ------------
@@ -21,9 +24,17 @@ Prepare the import
     * Set `CACHE_DIR` variable to the directory of installed Caché in your system. Do not add whitespaces before or after `=` symbol.
     * Set `NAMESPACE` variable to the namespace you want import project to.
     * Set `USERNAME` and `PASSWORD` variables if Caché instance requires one.
+    * Change `CSP_DIR` to the directory where you want static files to be copied to.
 2. Each next time just run the `import.*` script!
     * You should receive build and import log, saying `IMPORT STATUS: OK` at the end.
     * After successful import, run `do ##class(DevProject.Robot).Message()` in Caché terminal to check if project imported.
+    
+A few more steps to make this project work
+---------------------------------------------
+
+1. Set up `/Robots` web-application in Caché and give it `DevProject.REST.Index` as a dispatch class.
+2. Check if `/csp/user` web-application is set up (or whatever application you specified in `CSP_DIR`).
+3. Go to `http://[host]:[port]/csp/user/index.html` after set up and import is done.
     
 Contributing
 ------------
