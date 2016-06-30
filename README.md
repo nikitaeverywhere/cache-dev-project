@@ -28,7 +28,6 @@ Prepare the import
     * Change `CSP_DIR` to the directory where you want static files to be copied to.
 2. Each next time just run the `import.*` script!
     * You should receive build and import log, saying `IMPORT STATUS: OK` at the end.
-    * After successful import, run `do ##class(DevProject.Robot).Message()` in Caché terminal to check if project imported.
     
 A few more steps to make this project work
 ---------------------------------------------
