@@ -1,6 +1,5 @@
-:: This batch script makes the Caché application deployment much faster by building, importing and
-:: exporting the XML the project. Replace the path below to your Caché installation and
-:: build & import application to Caché using only one command.
+:: This batch script makes the Caché application deployment much faster by building and importing the project.
+:: Replace the variables below to match your Caché installation and build & import application to Caché using only one command.
 
 :: Caché 2016.2+ IS REQUIRED TO PROCEED
 @echo off
