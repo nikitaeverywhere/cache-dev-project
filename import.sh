@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-# This batch script makes the Caché application deployment much faster by building, importing and
-# exporting the XML the project. Replace the path below to your Caché installation and
-# build & import application to Caché using only one command.
+# This batch script makes the Caché application deployment much faster by building and importing the project.
+# Replace the variables below to match your Caché installation and build & import application to Caché using only one command.
 
 # Caché 2016.2+ IS REQUIRED TO PROCEED
 set +v
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# CHANGE THIS PATH TO YOUR CACHÉ INSTALLATION PATH ON WINDOWS (folder that contains bin, CSP, mgr and other folders)
+# CHANGE THIS PATH TO YOUR CACHÉ INSTALLATION PATH (folder that contains bin, CSP, mgr and other folders)
 CACHE_DIR=/InterSystems/Cache
 # NAMESPACE TO IMPORT PACKAGE TO
 NAMESPACE=USER
